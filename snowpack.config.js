@@ -11,7 +11,7 @@ module.exports = {
     "@snowpack/plugin-svelte",
     "@snowpack/plugin-dotenv",
     "@snowpack/plugin-sass",
-    "@snowpack/plugin-webpack",
+    // "@snowpack/plugin-webpack",
   ],
   buildOptions: {
     clean: true,

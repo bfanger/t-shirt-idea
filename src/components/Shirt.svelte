@@ -18,7 +18,7 @@
     CanvasTexture,
     GLTFLoader,
     Geometry,
-  } from "svelthree";
+  } from "https://unpkg.com/svelthree@latest/dist/svelthree.mjs";
 
   export let name: string;
 
