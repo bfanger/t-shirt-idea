@@ -36,6 +36,16 @@
         color: white;
         font: 18px sans-serif;
       }
+      #texture {
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        width: 256px;
+        height: 256px;
+        pointer-events: none;
+        opacity: 0;
+      }
       .panel.hidden {
         transform: translateX(-50%) translateY(100%);
       }
@@ -58,9 +68,10 @@
   </head>
   <body>
     <canvas id="canvas"></canvas>
+    <canvas id="texture" width="1024" height="1024"></canvas>
     <div id="loading" class="panel">Bezig met laden...</div>
     <div id="panel" class="panel hidden">
-      <input type="text" placeholder="Naam" autofocus />
+      <input type="text" placeholder="Rug tekst" value="Marcel" />
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
