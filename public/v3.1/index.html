@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/v3.1/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+    <style>
+      html,
+      body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      #canvas {
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+        outline: none;
+      }
+      .panel {
+        position: fixed;
+        z-index: 1;
+        bottom: 0px;
+        padding: 16px;
+        left: 50%;
+        background: linear-gradient(336deg, #141313, #413f3f);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        transform: translateX(-50%);
+        will-change: transform;
+        transition: 0.5s ease-out;
+        box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+        color: white;
+        font: 18px sans-serif;
+      }
+      #texture {
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        width: 256px;
+        height: 256px;
+        pointer-events: none;
+        opacity: 0;
+      }
+      .panel.hidden {
+        transform: translateX(-50%) translateY(100%);
+      }
+      input {
+        background: linear-gradient(180deg, #5f5f5f, #767373);
+        border: 1px solid #2e2e2e;
+        font-size: 18px;
+        padding: 4px 16px;
+        outline: none;
+        color: white;
+        border-radius: 4px;
+      }
+      input:focus {
+        border-color: #787878;
+      }
+      input::placeholder {
+        color: #a0a0a0;
+      }
+    </style>
+    <script type="module" crossorigin src="/v3.1/assets/index-b98d4713.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <canvas id="texture" width="1024" height="1024"></canvas>
+    <div id="loading" class="panel">Bezig met laden...</div>
+    <div id="panel" class="panel hidden">
+      <input type="text" placeholder="Rug tekst" value="Marcel" />
+    </div>
+    
+  </body>
+</html>
